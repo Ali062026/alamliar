@@ -1453,3 +1453,78 @@ ukuran logo khusus mobile
     font-size:16px;
     color:#666;
 }
+
+
+/* =========================================
+   GALLERY
+========================================= */
+
+#gallery{
+
+    background:#ffffff;
+    padding:90px 0;
+
+}
+
+.gallery-grid{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+    margin-top:50px;
+
+}
+
+.gallery-item{
+
+    position:relative;
+    overflow:hidden;
+    border-radius:18px;
+    box-shadow:0 15px 35px rgba(0,0,0,.10);
+    cursor:pointer;
+
+}
+
+.gallery-item img{
+
+    width:100%;
+    height:380px;
+    object-fit:cover;
+    transition:.5s;
+
+}
+
+.gallery-item:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.gallery-caption{
+
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+
+    padding:24px;
+
+    color:#fff;
+    font-size:24px;
+    font-weight:600;
+
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.75)
+    );
+
+}
+
+.gallery-item:hover{
+
+    box-shadow:0 25px 45px rgba(0,0,0,.20);
+
+}
+
+
+
