@@ -311,7 +311,9 @@ header.scrolled .menu li a:hover{
 
 .hero{
 
-    height:100vh;
+    min-height:100vh;
+    height:auto;
+    padding:140px 20px 80px;
 
     background:
 
@@ -351,7 +353,7 @@ header.scrolled .menu li a:hover{
 
 .hero h1{
 
-    font-size:64px;
+    font-size:38px;
 
     line-height:1.2;
 
@@ -363,7 +365,7 @@ header.scrolled .menu li a:hover{
 
 .hero p{
 
-    font-size:22px;
+    font-size:18px;
 
     margin-bottom:40px;
 
