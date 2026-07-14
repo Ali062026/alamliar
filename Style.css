@@ -1400,3 +1400,23 @@ footer a:hover{
 }
 
 
+/* =====================================================
+ukuran logo khusus mobile
+=======================================================*/
+@media (max-width:768px){
+
+    .navbar{
+        height:65px;
+    }
+
+    .logo{
+        font-size:20px;
+        gap:8px;
+    }
+
+    .logo img{
+        width:38px;
+        height:38px;
+    }
+
+}
