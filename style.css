@@ -1577,3 +1577,54 @@ RESPONSIVE GALLERY
 }
 
 
+/* ===================================
+   HERO MOBILE
+=================================== */
+
+@media (max-width:768px){
+
+.hero{
+
+    min-height:100vh;
+    padding:100px 20px 60px;
+}
+
+.hero-overlay{
+
+    width:100%;
+}
+
+.hero h1{
+
+    font-size:30px;
+    line-height:1.3;
+}
+
+.hero p{
+
+    font-size:16px;
+    line-height:1.8;
+}
+
+.hero-button{
+
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin-top:30px;
+}
+
+.hero-button a{
+
+    width:100%;
+    text-align:center;
+}
+
+.hero-badge{
+
+    margin-bottom:20px;
+    font-size:14px;
+}
+
+}
+
