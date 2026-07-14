@@ -1420,3 +1420,36 @@ ukuran logo khusus mobile
     }
 
 }
+
+/* ==========================
+   STATISTICS
+========================== */
+
+.statistics{
+    background:#ffffff;
+    padding:60px 0;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.stat-item{
+    text-align:center;
+}
+
+.stat-item h2{
+    margin:0;
+    font-size:42px;
+    color:var(--primary-dark);
+    line-height:1.1;
+}
+
+.stat-item p{
+    margin-top:8px;
+    margin-bottom:0;
+    font-size:16px;
+    color:#666;
+}
