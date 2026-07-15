@@ -1249,9 +1249,7 @@ section h2::after{
 
 @media (max-width:768px){
 
-    .cta p{
-        color:#fff !important;
-    }
+     .cta p{color:#fff !important;}
 
 }
 
@@ -1419,7 +1417,11 @@ footer a:hover{
 
     .cta h2{font-size:32px;}
 
-    .cta p{font-size:18px;}
+.cta p{
+        color:#fff;
+        font-size:18px;
+        opacity:1;
+    }
 
     .accordion{
 
