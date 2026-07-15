@@ -1243,6 +1243,19 @@ section h2::after{
     display: inline-block;
 }
 
+/* ===================================
+   MOBILE CTA
+=================================== */
+
+@media (max-width:768px){
+
+    .cta p{
+        color:#fff !important;
+    }
+
+}
+
+
 
 /* ===================================
    FOOTER
