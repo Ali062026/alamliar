@@ -82,8 +82,7 @@ button{
 
 .container{
 
-    width:90%;
-    max-width:1200px;
+    width:min(1200px,90%);
     margin:auto;
 
 }
@@ -1616,3 +1615,29 @@ RESPONSIVE GALLERY
 
 }
 
+/* ======================================
+ MOBILE NAVBAR 
+========================================*/
+.hamburger{
+    display:none;
+    background:none;
+    border:none;
+    font-size:30px;
+    cursor:pointer;
+}
+
+@media (max-width:768px){
+
+    .hamburger{
+        display:block;
+    }
+
+    .menu{
+        display:none;
+    }
+
+    .navbar{
+        width:100%;
+        padding:0 20px;
+    }
+}
