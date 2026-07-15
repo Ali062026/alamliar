@@ -1682,6 +1682,11 @@ Mobile MENU
     z-index:1001;
 }
 
+.hamburger.active{
+    transform:rotate(90deg);
+    transition:.3s;
+}
+
 /* Warna hamburger saat header berubah */
 header.scrolled .hamburger{
     color:var(--primary-dark);
