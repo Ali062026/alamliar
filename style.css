@@ -1757,4 +1757,53 @@ header.scrolled .hamburger{
     }
 
 }
+/* ===================================
+   HERO BADGE
+=================================== */
+
+.hero-badge{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    max-width:100%;
+
+    padding:10px 18px;
+
+    margin:0 auto 25px;
+
+    background:rgba(255,255,255,.15);
+
+    border-radius:30px;
+
+    backdrop-filter:blur(8px);
+
+    text-align:center;
+
+}
+/* ===================================
+   HERO BADGE MOBILE
+=================================== */
+
+@media(max-width:768px){
+
+.hero-badge{
+
+    width:fit-content;
+
+    max-width:90%;
+
+    font-size:13px;
+
+    line-height:1.5;
+
+    padding:10px 16px;
+
+}
+
+}
+
 
