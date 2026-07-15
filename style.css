@@ -1314,25 +1314,17 @@ footer a:hover{
 
 
 /* ===================================
-   RESPONSIVE TABLE scrollbar
+   RESPONSIVE TABLE scrollbar - table wrapper
 =================================== */
 
-@media(max-width:768px){
+.table-wrapper{
 
-    #schedule{
-
-        overflow-x:auto;
-
-    }
-
-    #schedule table{
-
-        min-width:650px;
-
-    }
-
+    width:100%;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
 }
 
+.table-wrapper table{min-width:650px;}
 
 
 /* ===================================
