@@ -1387,17 +1387,11 @@ footer a:hover{
 
 @media(max-width:768px){
 
-    .cta h2{
+    .cta{color:#fff;}
 
-        font-size:32px;
+    .cta h2{font-size:32px;}
 
-    }
-
-    .cta p{
-
-        font-size:18px;
-
-    }
+    .cta p{font-size:18px;}
 
     .accordion{
 
