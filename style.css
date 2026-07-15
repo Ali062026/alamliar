@@ -1638,3 +1638,19 @@ RESPONSIVE GALLERY
 *{
     outline:1px solid red;
 }
+
+/* ======================================
+Mobile STATISTIK
+=======================================*/
+
+@media(max-width:768px){
+
+.stats-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+}
