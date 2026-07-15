@@ -391,6 +391,82 @@ letter-spacing:2px;
 }
 
 
+/* ==========================
+   HERO MOUNTAIN BACKGROUND
+========================== */
+
+.hero-mountain{
+
+    position:absolute;
+
+    bottom:0;
+
+    left:0;
+
+    width:100%;
+
+    height:auto;
+
+    z-index:1;
+
+    opacity:.35;
+
+    pointer-events:none;
+
+}
+/* ==========================
+   HERO MOUNTAIN BACKGROUND animated
+========================== */
+
+.hero-mountain{
+
+    animation:floatMountain 8s ease-in-out infinite;
+}
+
+@keyframes floatMountain{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+
+/* ======================================
+Supaya silhouette menyatu dengan background Hero 
+========================================= */
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    right:0;
+
+    bottom:0;
+
+    height:120px;
+
+    background:linear-gradient(
+        to top,
+        rgba(20,60,35,.5),
+        transparent
+    );
+
+    z-index:2;
+
+}
 
 
 /* ==========================
