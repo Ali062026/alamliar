@@ -773,6 +773,21 @@ Supaya silhouette menyatu dengan background Hero
 
 }
 
+/* ===================================
+   MOUNTAIN INFO
+=================================== */
+
+.mountain-info{
+    padding:0 25px 25px;
+    text-align:center;
+}
+
+.mountain-info p{
+    margin:8px 0;
+    color:#666;
+    font-size:15px;
+}
+
 
 /* ===================================
    DESTINATION HOVER OVERLAY
