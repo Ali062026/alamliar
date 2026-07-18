@@ -1,0 +1,1417 @@
+/* =====================================================
+   ALAMLIAR.COM
+   detail-gunung.css
+   DETAIL PAGE ONLY
+===================================================== */
+
+
+/* ==========================
+   DETAIL HERO
+========================== */
+
+.detail-hero{
+
+    position:relative;
+
+    min-height:78vh;
+
+    display:flex;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    padding:0;
+
+}
+
+.detail-hero img{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.45)
+    );
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:720px;
+
+    color:#fff;
+
+}
+
+.hero-badge{
+
+    display:inline-block;
+
+    padding:10px 18px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(12px);
+
+    margin-bottom:22px;
+
+}
+
+.hero-content h1{
+
+    font-size:4rem;
+
+    line-height:1.1;
+
+    margin-bottom:22px;
+
+}
+
+.hero-content p{
+
+    font-size:1.15rem;
+
+    max-width:620px;
+
+}
+
+.hero-rating{
+
+    margin:32px 0;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:16px;
+
+    flex-wrap:wrap;
+
+}
+
+
+/* ==========================
+   QUICK INFO
+========================== */
+
+.quick-info{
+
+    position:relative;
+
+    margin-top:-70px;
+
+    z-index:20;
+
+}
+
+.quick-info .container{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(180px,1fr));
+
+    gap:24px;
+
+}
+
+.info-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    padding:32px 20px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.info-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.icon{
+
+    font-size:2rem;
+
+    margin-bottom:16px;
+
+}
+
+.info-card h3{
+
+    margin-bottom:10px;
+
+    color:var(--primary);
+
+}
+
+/* =====================================================
+   PART 2B
+   Layout • About • Highlight • Gallery • Timeline
+===================================================== */
+
+
+/* ==========================
+   DETAIL LAYOUT
+========================== */
+
+.detail-layout{
+
+    display:grid;
+
+    grid-template-columns:minmax(0,1fr) 360px;
+
+    gap:40px;
+
+    align-items:start;
+
+    margin-top:80px;
+
+}
+
+.detail-content{
+
+    min-width:0;
+
+}
+
+.booking-sidebar{
+
+    position:sticky;
+
+    top:110px;
+
+}
+
+
+/* ==========================
+   BOOKING CARD
+========================== */
+
+.booking-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:28px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.price-label{
+
+    display:block;
+
+    color:#777;
+
+    font-size:.9rem;
+
+}
+
+.booking-card h2{
+
+    color:var(--primary);
+
+    font-size:2rem;
+
+    margin:10px 0;
+
+}
+
+.booking-card p{
+
+    color:#666;
+
+    margin-bottom:20px;
+
+}
+
+.booking-card ul{
+
+    margin-bottom:25px;
+
+}
+
+.booking-card li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 0;
+
+    border-bottom:1px solid #f1f1f1;
+
+}
+
+.booking-card li:last-child{
+
+    border-bottom:none;
+
+}
+
+
+/* ==========================
+   ABOUT
+========================== */
+
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+
+    align-items:center;
+
+}
+
+.about-image img{
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.about-content p{
+
+    margin-bottom:20px;
+
+    color:#555;
+
+}
+
+.about-features{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+    margin-top:30px;
+
+}
+
+.about-features div{
+
+    background:#fff;
+
+    padding:15px 18px;
+
+    border-radius:14px;
+
+    box-shadow:var(--shadow-sm);
+
+    font-weight:500;
+
+}
+
+
+/* ==========================
+   HIGHLIGHT
+========================== */
+
+.highlight-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:24px;
+
+}
+
+.highlight-card{
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.highlight-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.highlight-icon{
+
+    font-size:2.4rem;
+
+    margin-bottom:18px;
+
+}
+
+.highlight-card h3{
+
+    margin-bottom:12px;
+
+}
+
+.highlight-card p{
+
+    color:#666;
+
+}
+
+
+/* ==========================
+   GALLERY
+========================== */
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:18px;
+
+}
+
+.gallery-item{
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+}
+
+.gallery-item img{
+
+    aspect-ratio:4/3;
+
+    object-fit:cover;
+
+    transition:.35s;
+
+}
+
+.gallery-item:hover img{
+
+    transform:scale(1.08);
+
+}
+
+
+/* ==========================
+   TIMELINE
+========================== */
+
+.timeline{
+
+    position:relative;
+
+    margin-top:40px;
+
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:28px;
+
+    top:0;
+
+    bottom:0;
+
+    width:3px;
+
+    background:#d8e6d8;
+
+}
+
+.timeline-item{
+
+    position:relative;
+
+    display:flex;
+
+    gap:35px;
+
+    margin-bottom:45px;
+
+}
+
+.timeline-time{
+
+    min-width:90px;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+}
+
+.timeline-content{
+
+    flex:1;
+
+    background:#fff;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+    position:relative;
+
+}
+
+.timeline-content::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-34px;
+
+    top:30px;
+
+    width:18px;
+
+    height:18px;
+
+    background:var(--primary);
+
+    border-radius:50%;
+
+}
+
+.timeline-content h3{
+
+    margin-bottom:15px;
+
+}
+
+.timeline-content ul{
+
+    padding-left:20px;
+
+    list-style:disc;
+
+}
+
+.timeline-content li{
+
+    margin-bottom:10px;
+
+    color:#555;
+
+}
+
+/* =====================================================
+   PART 2C
+   Pricing • Facilities • FAQ • CTA • Footer • Responsive
+===================================================== */
+
+
+/* ==========================
+   PRICING
+========================== */
+
+.pricing-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    overflow:hidden;
+
+}
+
+.price-header{
+
+    background:var(--primary);
+
+    color:#fff;
+
+    padding:30px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+.price{
+
+    font-size:2rem;
+
+    font-weight:700;
+
+}
+
+.price small{
+
+    font-size:.9rem;
+
+    font-weight:400;
+
+}
+
+.price-content{
+
+    padding:35px;
+
+}
+
+.price-content p{
+
+    margin-bottom:30px;
+
+}
+
+
+/* ==========================
+   FACILITIES
+========================== */
+
+.facility-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+.facility-card{
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.facility-card h3{
+
+    margin-bottom:20px;
+
+    color:var(--primary);
+
+}
+
+.facility-card ul{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+.facility-card li{
+
+    padding:12px 0;
+
+    border-bottom:1px solid #eee;
+
+}
+
+.facility-card li:last-child{
+
+    border-bottom:none;
+
+}
+
+
+/* ==========================
+   GEAR
+========================== */
+
+.gear-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:20px;
+
+}
+
+.gear-grid div{
+
+    background:#fff;
+
+    padding:18px;
+
+    text-align:center;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.gear-grid div:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+/* ==========================
+   FAQ
+========================== */
+
+.faq-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.faq-list details{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+    padding:22px;
+
+}
+
+.faq-list summary{
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    list-style:none;
+
+}
+
+.faq-list summary::-webkit-details-marker{
+
+    display:none;
+
+}
+
+.faq-list p{
+
+    margin-top:18px;
+
+    color:#666;
+
+}
+
+
+/* ==========================
+   TESTIMONIAL
+========================== */
+
+.testimonial-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+}
+
+.testimonial-card{
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.stars{
+
+    margin-bottom:20px;
+
+}
+
+.testimonial-card strong{
+
+    display:block;
+
+    margin-top:25px;
+
+    color:var(--primary);
+
+}
+
+
+/* ==========================
+   RELATED TRIPS
+========================== */
+
+.related-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+.trip-card{
+
+    background:#fff;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.trip-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.trip-card img{
+
+    height:220px;
+
+    object-fit:cover;
+
+}
+
+.trip-card h3{
+
+    padding:22px 22px 12px;
+
+}
+
+.trip-card .btn-secondary{
+
+    margin:0 22px 22px;
+
+    border-color:var(--primary);
+
+    color:var(--primary);
+
+}
+
+.trip-card .btn-secondary:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+
+/* ==========================
+   CTA
+========================== */
+
+.cta-booking{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-dark)
+    );
+
+    color:#fff;
+
+    text-align:center;
+
+    border-radius:30px;
+
+    margin:90px auto;
+
+}
+
+.cta-booking h2{
+
+    font-size:2.5rem;
+
+    margin-bottom:20px;
+
+}
+
+.cta-booking p{
+
+    max-width:650px;
+
+    margin:auto auto 35px;
+
+}
+
+.cta-booking .btn-primary{
+
+    background:#fff;
+
+    color:var(--primary);
+
+}
+
+.cta-booking .btn-primary:hover{
+
+    background:#f2f2f2;
+
+}
+
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:1100px){
+
+.detail-layout{
+
+    grid-template-columns:1fr;
+
+}
+
+.booking-sidebar{
+
+    position:relative;
+
+    top:auto;
+
+}
+
+.about-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.gallery-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.facility-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+
+@media(max-width:768px){
+
+.hero-content h1{
+
+    font-size:2.8rem;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+}
+
+.hero-buttons a{
+
+    width:100%;
+
+}
+
+.gallery-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.timeline-item{
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.timeline::before{
+
+    display:none;
+
+}
+
+.timeline-content::before{
+
+    display:none;
+
+}
+
+.price-header{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.cta-booking{
+
+    border-radius:20px;
+
+    margin:60px 20px;
+
+    padding:60px 25px;
+
+}
+
+.cta-booking h2{
+
+    font-size:2rem;
+
+}
+
+}
+
+
+@media(max-width:576px){
+
+.detail-hero{
+
+    min-height:65vh;
+
+}
+
+.hero-content h1{
+
+    font-size:2.2rem;
+
+}
+
+.hero-content p{
+
+    font-size:1rem;
+
+}
+
+.quick-info .container{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.info-card{
+
+    padding:20px 15px;
+
+}
+
+.about-features{
+
+    grid-template-columns:1fr;
+
+}
+
+.testimonial-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.related-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.gear-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* ==========================
+   trip card trip lainnya
+========================== */
+
+.trip-card-body{
+
+    padding:24px;
+
+}
+
+.trip-card-body p{
+
+    margin-bottom:10px;
+
+    color:#666;
+
+}
+
+
+/* =====================================================
+   LIGHTBOX
+===================================================== */
+
+.lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.92);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.lightbox.active{
+
+    display:flex;
+
+}
+
+.lightbox img{
+
+    max-width:90%;
+
+    max-height:85vh;
+
+    border-radius:14px;
+
+}
+
+.lightbox-close{
+
+    position:absolute;
+
+    top:30px;
+
+    right:40px;
+
+    color:#fff;
+
+    font-size:3rem;
+
+    cursor:pointer;
+
+}
+
+.lightbox-prev,
+.lightbox-next{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    border:none;
+
+    background:rgba(255,255,255,.18);
+
+    color:#fff;
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:1.5rem;
+
+}
+
+.lightbox-prev{
+
+    left:30px;
+
+}
+
+.lightbox-next{
+
+    right:30px;
+
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover{
+
+    background:rgba(255,255,255,.35);
+
+}
+
+@media(max-width:768px){
+
+.lightbox-prev,
+.lightbox-next{
+
+    width:44px;
+
+    height:44px;
+
+}
+
+.lightbox-close{
+
+    top:15px;
+
+    right:20px;
+
+    font-size:2.2rem;
+
+}
+
+}
+
+
+
+/* =====================================================
+   MOBILE BOOKING BAR
+===================================================== */
+
+.mobile-booking{
+
+    display:none;
+
+}
+
+@media(max-width:768px){
+
+.mobile-booking{
+
+    position:fixed;
+
+    left:0;
+
+    right:0;
+
+    bottom:0;
+
+    background:#fff;
+
+    box-shadow:0 -8px 30px rgba(0,0,0,.12);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 20px;
+
+    z-index:999;
+
+    /* Tambahkan ini */
+    transform:translateY(100%);
+    opacity:0;
+    transition: transform .35s ease, opacity .35s ease;
+
+}
+
+.mobile-booking.show{
+
+    transform:translateY(0);
+
+    opacity:1;
+
+}
+
+.mobile-price{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.mobile-price span{
+
+    font-size:.8rem;
+
+    color:#777;
+
+}
+
+.mobile-price strong{
+
+    color:var(--primary);
+
+    font-size:1.2rem;
+
+}
+
+.mobile-booking .btn-primary{
+
+    padding:12px 24px;
+
+}
+
+body{
+
+    padding-bottom:95px;
+
+}
+
+}
+
+
+/* =====================================================
+   BOOKING SECTION
+===================================================== */
+
+.booking-section{
+
+    background:#f7faf7;
+
+}
+
+.booking-form-card{
+
+    max-width:760px;
+
+    margin:auto;
+
+    background:#fff;
+
+    padding:40px;
+
+    border-radius:24px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.form-group{
+
+    margin-bottom:25px;
+
+}
+
+.form-group label{
+
+    display:block;
+
+    font-weight:600;
+
+    margin-bottom:10px;
+
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+    width:100%;
+
+    padding:16px;
+
+    border:1px solid #ddd;
+
+    border-radius:14px;
+
+    font-size:1rem;
+
+    font-family:inherit;
+
+}
+
+.form-group textarea{
+
+    resize:vertical;
+
+    min-height:120px;
+
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+
+    outline:none;
+
+    border-color:var(--primary);
+
+}
+
