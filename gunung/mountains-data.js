@@ -62,7 +62,9 @@ window.mountains = {
 
         {
          id:1,
+         slug:"2026-07-18",
          date:"18 Juli 2026",
+         MeetingPoint:["Bintaro","BSD"],
          quota:12,
          booked:4,
          status:"Open"
@@ -70,7 +72,9 @@ window.mountains = {
 
         {
          id:2,
+         slug:"2026-07-25",
          date:"25 Juli 2026",
+         MeetingPoint:["Bintaro","BSD"],
          quota:12,
          booked:9,
          status:"Open"
@@ -78,7 +82,9 @@ window.mountains = {
 
         {
          id:3,
+         slug:"2026-08-26",
          date:"8 Agustus 2026",
+         MeetingPoint:["Bintaro","BSD"],
          quota:12,
          booked:12,
          status:"Full"
