@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Jadwal Open Trip | AlamLiar</title>
+
+    <meta name="description"
+        content="Lihat jadwal Open Trip pendakian Gunung Jawa Tengah bersama AlamLiar. Pilih tanggal keberangkatan, cek kuota, dan booking dengan mudah.">
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+        href="../style.css">
+
+    <link rel="stylesheet"
+        href="jadwal.css">
+
+</head>
+
+<body>
+
+<!-- ===========================
+HEADER
+=========================== -->
+
+<header>
+
+    <div class="container nav">
+
+        <a href="../index.html"
+            class="logo">
+
+            <img
+                loading="lazy"
+                src="../assets/logo.png"
+                alt="AlamLiar">
+
+            <span>AlamLiar</span>
+
+        </a>
+
+        <nav>
+
+            <ul>
+
+                <li>
+
+                    <a href="../index.html">
+
+                        Beranda
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="../index.html#mountains">
+
+                        Gunung
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a
+                        class="active"
+                        href="jadwal.html">
+
+                        Jadwal
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="../index.html#faq">
+
+                        FAQ
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="../index.html#contact">
+
+                        Kontak
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<!-- ===========================
+HERO
+=========================== -->
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <span class="hero-badge">
+
+            📅 OPEN TRIP 2026
+
+        </span>
+
+        <h1>
+
+            Jadwal Open Trip
+            Pendakian Gunung
+
+        </h1>
+
+        <p>
+
+            Pilih gunung favoritmu, lihat jadwal keberangkatan,
+            cek sisa kuota, lalu booking dengan mudah melalui
+            WhatsApp.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ===========================
+FILTER
+=========================== -->
+
+<section class="schedule-filter">
+
+    <div class="container">
+
+        <div class="filter-header">
+
+            <h2>
+
+                Pilih Jadwal Pendakian
+
+            </h2>
+
+            <p>
+
+                Filter berdasarkan gunung, bulan keberangkatan, atau status trip.
+
+            </p>
+
+        </div>
+
+        <div class="filter-grid">
+
+            <!-- Gunung -->
+
+            <div class="filter-item">
+
+                <label for="filterMountain">
+
+                    Gunung
+
+                </label>
+
+                <select id="filterMountain">
+
+                    <option value="all">
+
+                        Semua Gunung
+
+                    </option>
+
+                </select>
+
+            </div>
+
+            <!-- Bulan -->
+
+            <div class="filter-item">
+
+                <label for="filterMonth">
+
+                    Bulan
+
+                </label>
+
+                <select id="filterMonth">
+
+                    <option value="all">
+
+                        Semua Bulan
+
+                    </option>
+
+                </select>
+
+            </div>
+
+            <!-- Status -->
+
+            <div class="filter-item">
+
+                <label for="filterStatus">
+
+                    Status
+
+                </label>
+
+                <select id="filterStatus">
+
+                    <option value="all">
+
+                        Semua Status
+
+                    </option>
+
+                    <option value="Open">
+
+                        Open
+
+                    </option>
+
+                    <option value="Full">
+
+                        Full
+
+                    </option>
+
+                </select>
+
+            </div>
+
+            <!-- Reset -->
+
+            <div class="filter-action">
+
+                <button
+                    id="resetFilter"
+                    class="btn-secondary">
+
+                    Reset Filter
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===========================
+SCHEDULE LIST
+=========================== -->
+
+<section class="schedule-section">
+
+    <div class="container">
+
+        <!-- Summary -->
+
+        <div class="schedule-summary">
+
+            <p id="scheduleCount">
+
+                Menampilkan 0 Jadwal
+
+            </p>
+
+        </div>
+
+        <!-- Schedule Grid -->
+
+        <div
+            class="schedule-grid"
+            id="scheduleGrid">
+
+            <!--
+            Seluruh card jadwal akan dibuat
+            otomatis oleh jadwal.js
+            -->
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===========================
+CTA
+=========================== -->
+
+<section class="schedule-cta">
+
+    <div class="container">
+
+        <div class="cta-card">
+
+            <span class="cta-badge">
+
+                🌄 Belum Menemukan Jadwal?
+
+            </span>
+
+            <h2>
+
+                Ingin Jadwal di Tanggal Lain?
+
+            </h2>
+
+            <p>
+
+                Hubungi Admin AlamLiar untuk request jadwal private trip,
+                corporate outing, atau pendakian bersama komunitas.
+
+            </p>
+
+            <div class="cta-buttons">
+
+                <a
+                    href="https://wa.me/6281287588846"
+                    target="_blank"
+                    class="btn-primary">
+
+                    Hubungi Admin
+
+                </a>
+
+                <a
+                    href="../index.html#mountains"
+                    class="btn-secondary">
+
+                    Lihat Gunung
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+FOOTER
+=========================== -->
+
+<footer>
+
+    <div class="container footer-content">
+
+        <div class="footer-brand">
+
+            <img
+                src="../assets/logo.png"
+                alt="AlamLiar">
+
+            <h3>
+
+                AlamLiar
+
+            </h3>
+
+            <p>
+
+                Open Trip Pendakian Gunung Jawa Tengah
+                dengan perjalanan yang aman,
+                nyaman, dan menyenangkan.
+
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h4>
+
+                Navigasi
+
+            </h4>
+
+            <a href="../index.html">
+
+                Beranda
+
+            </a>
+
+            <a href="../index.html#mountains">
+
+                Gunung
+
+            </a>
+
+            <a href="jadwal.html">
+
+                Jadwal
+
+            </a>
+
+            <a href="../index.html#faq">
+
+                FAQ
+
+            </a>
+
+        </div>
+
+        <div class="footer-contact">
+
+            <h4>
+
+                Kontak
+
+            </h4>
+
+            <p>
+
+                📱 +62 812-8758-8846
+
+            </p>
+
+            <p>
+
+                📍 BSD & Bintaro
+
+            </p>
+
+            <p>
+
+                📧 info@alamliar.com
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        © 2026 AlamLiar.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+<!-- ===========================
+JAVASCRIPT
+=========================== -->
+
+<script src="mountains-data.js"></script>
+
+<script src="jadwal.js"></script>
+
+</body>
+
+</html>
+
+
+
+

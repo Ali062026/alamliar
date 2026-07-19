@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 /* ==========================================
-   INIT
+             INIT
 ========================================== */
 
 function initMountainPage() {
@@ -43,7 +43,7 @@ function initMountainPage() {
     renderPricing(mountain);
     renderFacilities(mountain);
     renderGear(mountain);
-    renderFAQ
+    renderFAQ(mountain);
     renderRelated(slug);
     renderBooking(mountain);
     renderMeetingPoint(mountain); 
@@ -55,7 +55,7 @@ function initMountainPage() {
 
 
 /* ==========================================
-   HERO
+   RENDER HERO
 ========================================== */
 
 function renderHero(data) {
@@ -78,12 +78,13 @@ function renderHero(data) {
 
     }
 
-document.title = `${data.nama} | AlamLiar`;
+document.title =
+`${data.nama} (${data.tinggi} mdpl) | Open Trip AlamLiar`;
 }
 
 
 /* ==========================================
-   QUICK INFO
+   RENDER QUICK INFO
 ========================================== */
 
 function renderQuickInfo(data){
@@ -94,13 +95,13 @@ function renderQuickInfo(data){
 
     setText("infoDuration", data.durasi);
 
-    setText("infoMeeting", data.meetingPoint.join(", "));
+    setText("infoMeeting", data.booking.meetingPoint.join(", "));
 
 }
 
 
 /* ==========================================
-   ABOUT
+   RENDER ABOUT
 ========================================== */
 
 function renderAbout(data){
@@ -111,7 +112,7 @@ function renderAbout(data){
 
 
 /* ==========================================
-   GALLERY
+   RENDER GALLERY
 ========================================== */
 
 function renderGallery(data){
@@ -140,7 +141,7 @@ initGalleryLightbox();
 
 
 /* ==========================================
-   HIGHLIGHT
+   RENDER HIGHLIGHT
 ========================================== */
 
 function renderHighlights(data){
@@ -175,7 +176,7 @@ function renderHighlights(data){
 
 
 /* ==========================================
-   ITINERARY
+   RENDER ITINERARY
 ========================================== */
 
 function renderItinerary(data){
@@ -218,7 +219,7 @@ function renderItinerary(data){
 
 
 /* ==========================================
-   PRICING
+   RENDER PRICING
 ========================================== */
 
 function renderPricing(data){
@@ -233,7 +234,7 @@ function renderPricing(data){
 
 
 /* ==========================================
-   FACILITIES
+   RENDER FACILITIES 
 ========================================== */
 
 function renderFacilities(data){
@@ -262,7 +263,7 @@ function renderFacilities(data){
 
 
 /* ==========================================
-   GEAR
+   RENDER GEAR
 ========================================== */
 
 function renderGear(data){
@@ -291,7 +292,7 @@ function renderGear(data){
 
 
 /* ==========================================
-   FAQ
+   RENDER FAQ
 ========================================== */
 
 function renderFAQ(data){
@@ -332,41 +333,16 @@ function renderFAQ(data){
    BOOKING CARD
 ========================================== */
 
-
 function renderBooking(data){
 
     const price =
-
         "Rp " +
-
         Number(data.harga)
-
         .toLocaleString("id-ID");
 
-    setText(
-
-        "bookingPrice",
-
-        price
-
-    );
-
-    setText(
-
-        "mobilePrice",
-
-        price
-
-    );
-
-    setText(
-
-        "bookingMountain",
-
-        data.nama
-
-    );
-
+    setText("bookingPrice",price);
+    setText("mobilePrice",price);
+    setText("bookingMountain",data.nama);
 }
 
 
@@ -441,61 +417,6 @@ function renderRelated(currentSlug){
     });
 
 }
-
-
-
-/* ==========================================
-   UTILITIES
-========================================== */
-
-function setText(id,value){
-
-    const el=document.getElementById(id);
-
-    if(el){
-
-        el.textContent=value;
-
-    }
-
-}
-
-
-function setHTML(id,value){
-
-    const el=document.getElementById(id);
-
-    if(el){
-
-        el.innerHTML=value;
-
-    }
-
-}
-
-
-function showNotFound(){
-
-    document.body.innerHTML=`
-
-        <section style="padding:120px;text-align:center">
-
-            <h1>Gunung tidak ditemukan</h1>
-
-            <p>Silakan kembali ke halaman utama.</p>
-
-            <a href="../index.html" class="btn-primary">
-
-                Kembali
-
-            </a>
-
-        </section>
-
-    `;
-
-}
-
 
 /* ==========================================
    LIGHTBOX
@@ -576,51 +497,102 @@ function prevImage(){
    event listener
 ========================================== */
 
-document
-.getElementById("lightboxClose")
-.addEventListener("click",closeLightbox);
+const closeBtn =
+document.getElementById("lightboxClose");
+if(closeBtn){
+    closeBtn.addEventListener(
+        "click",
+        closeLightbox
+    );
+  }
 
-document
-.getElementById("lightboxNext")
-.addEventListener("click",nextImage);
 
-document
-.getElementById("lightboxPrev")
-.addEventListener("click",prevImage);
+const nextBtn = 
+document.getElementById("lightboxNext");
+if(nextBtn){
+    nextBtn.addEventListener(
+        "click",
+        nextImage
+    );
+ }
 
-document
-.getElementById("lightbox")
-.addEventListener("click",(e)=>{
+const PrevBtn = 
+document.getElementById("lightboxPrev");
+if(PrevBtn){
+    PrevBtn.addEventListener("click",prevImage);
+  }
 
-    if(e.target.id==="lightbox"){
-
-        closeLightbox();
-
+const lightbox =
+document.getElementById("lightbox");
+if(lightbox){
+    lightbox.addEventListener(("click",(e)=>{
+    if(e.target.id==="lightbox"){closeLightbox();}
     }
+  );
 
-});
 
 document.addEventListener("keydown",(e)=>{
-
     if(e.key==="Escape"){
-
         closeLightbox();
-
     }
 
     if(e.key==="ArrowRight"){
-
         nextImage();
-
     }
 
     if(e.key==="ArrowLeft"){
-
         prevImage();
-
     }
 
 });
+
+
+/* ==========================================
+   UTILITIES
+========================================== */
+
+function setText(id,value){
+
+    const el=document.getElementById(id);
+
+    if(el){
+        el.textContent=value;
+      }
+}
+
+
+function setHTML(id,value){
+
+    const el=document.getElementById(id);
+
+    if(el){
+        el.innerHTML=value;
+     }
+}
+
+
+function showNotFound(){
+
+    document.body.innerHTML=`
+        <section style="padding:120px;text-align:center">
+
+            <h1>Gunung tidak ditemukan</h1>
+
+            <p>Silakan kembali ke halaman utama.</p>
+
+            <a href="../index.html" class="btn-primary">
+
+                Kembali
+
+            </a>
+
+        </section>
+
+    `;
+
+}
+
+
 
 
 /* ==========================================
@@ -654,7 +626,7 @@ function toggleMobileBooking(){
 }
 
 /* ==========================================
-   rendermeetingpoint
+   renderMeetingpoint
 ========================================== */
 
 function renderMeetingPoint(data){
@@ -665,25 +637,18 @@ function renderMeetingPoint(data){
 
     select.innerHTML="";
 
-    data.booking.availableMeeting.forEach(point=>{
+    data.booking.meetingPoint.forEach(point=>{
 
         select.innerHTML += `
-
             <option value="${point}">
-
                 ${point}
-
             </option>
-
         `;
 
     });
 
 }
 
-/* ==========================================
-   fungsi booking WA
-========================================== */
 
 /* ==========================================
    BOOKING
@@ -729,20 +694,20 @@ function initBooking(data){
         ========================== */
 
         if(nama === ""){
-
             alert("Silakan isi Nama Lengkap.");
-
             return;
-
-        }
+         }
 
         if(phone === ""){
-
             alert("Silakan isi Nomor WhatsApp.");
-
             return;
+           }
 
-        }
+         const cleanedPhone = phone.replace(/\D/g,"");
+         if(cleanedPhone.length < 10){
+            alert("Nomor WhatsApp tidak valid.");
+            return;
+          }
 
         /* ==========================
            FORMAT PESAN
@@ -787,8 +752,9 @@ Terima kasih.`;
 
 }
 
+
 /* ==========================================
-   fungsi renderschedule
+   RENDER SCHEDULE
 ========================================== */
 
 function renderSchedule(data){
